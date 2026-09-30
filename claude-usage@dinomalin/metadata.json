@@ -1,0 +1,10 @@
+{
+  "uuid": "claude-usage@dinomalin",
+  "name": "Claude Usage",
+  "description": "Shows Claude plan usage (5-hour and weekly limits) in the top bar.",
+  "shell-version": [
+    "50"
+  ],
+  "version": 1,
+  "url": "https://github.com/DinoMalin/gnome-claude-usage"
+}

@@ -1,0 +1,62 @@
+.claude-usage-label {
+  font-feature-settings: "tnum";
+}
+
+.claude-usage-warning {
+  color: #f5c211;
+}
+
+.claude-usage-critical {
+  color: #ff7b63;
+}
+
+.claude-usage-row {
+  spacing: 6px;
+  min-width: 260px;
+}
+
+.claude-usage-row-header {
+  spacing: 12px;
+}
+
+.claude-usage-row-title {
+  font-weight: bold;
+}
+
+.claude-usage-row-detail {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.claude-usage-track {
+  height: 6px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.claude-usage-fill {
+  height: 6px;
+  border-radius: 3px;
+  background-color: #d97757;
+}
+
+.claude-usage-fill.claude-usage-warning {
+  background-color: #f5c211;
+}
+
+.claude-usage-fill.claude-usage-critical {
+  background-color: #ff7b63;
+}
+
+.claude-usage-status {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9em;
+}
+
+.claude-usage-box {
+  spacing: 6px;
+}
+
+.claude-usage-logo {
+  color: #d97757;
+  font-weight: bold;
+}
