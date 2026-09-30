@@ -2,9 +2,7 @@
 
 A GNOME Shell extension that shows your Claude plan usage in the top bar.
 
-```
-✻ 42% · 18%
-```
+![Claude usage in the GNOME top bar](docs/topbar.png)
 
 The first number is your current 5-hour session, the second is your weekly limit. The percentages turn yellow at 75% and red at 90%. Click the indicator to see progress bars and when each limit resets.
 
