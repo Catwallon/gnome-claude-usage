@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}/claude-usage"
+input="$(cat)"
+
+if jq -e '.rate_limits' >/dev/null 2>&1 <<<"$input"; then
+  mkdir -p "$cache_dir"
+  tmp="$(mktemp "$cache_dir/.usage.XXXXXX")"
+  jq --arg now "$(date +%s)" '{source: "statusline", updated_at: ($now | tonumber), rate_limits: .rate_limits}' <<<"$input" >"$tmp"
+  mv "$tmp" "$cache_dir/usage.json"
+fi
+
+jq -r '
+  def pct($w): if $w and $w.used_percentage != null then "\($w.used_percentage | floor)%" else "–" end;
+  "\(.model.display_name // "Claude") · 5h \(pct(.rate_limits.five_hour)) · 7d \(pct(.rate_limits.seven_day))"
+' <<<"$input"
